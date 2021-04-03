@@ -9,19 +9,19 @@ let computerScore = 0;
 let playerScore = 0;
 
 const playRound = (playerSelection, computerSelection) => {
-    if ((playerSelection.toLowerCase() === 'rock' && computerSelection == 'scissors') ||
-        (playerSelection.toLowerCase() === 'paper' && computerSelection == 'rock') ||
-        (playerSelection.toLowerCase() === 'scissors' && computerSelection == 'paper')) {
+    if ((playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') ||
+        (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') ||
+        (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper')) {
             playerScore++; 
             return `You Win!, ${playerSelection} beats ${computerSelection}`;
     } else if   
-        ((playerSelection.toLowerCase() === 'rock' && computerSelection == 'paper') ||
-        (playerSelection.toLowerCase() === 'paper' && computerSelection == 'scissors') ||
-        (playerSelection.toLowerCase() === 'scissors' && computerSelection == 'rock')) {
+        ((playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper') ||
+        (playerSelection.toLowerCase() === 'paper' && computerSelection === 'scissors') ||
+        (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'rock')) {
             computerScore++; 
             return `You lose, ${computerSelection} beats ${playerSelection}`;
     } else if 
-        ((playerSelection.toLowerCase() && computerSelection) === ('rock' || 'paper' || 'scissors')) {
+        (playerSelection.toLowerCase() === computerSelection) {
             return `It's a draw\nYou chose ${playerSelection}\nComputer chose ${computerSelection}`;
     } else return `Looks like your input was invalid\n${playerSelection}`
 };
