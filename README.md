@@ -1,4 +1,1 @@
-# rockPaperScissors
-Rock Paper Scissors project for the Odin Project
-
-First project that involves javascript.
+Next update my Odin Project Rock Paper Scissors site
